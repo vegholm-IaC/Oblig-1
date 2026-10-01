@@ -55,6 +55,9 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
+      - name: Vis innlogget Azure-identitet
+        run: az account show --output json
+
       - name: Hent parameterfila for miljøet
         run: |
           az keyvault secret show \

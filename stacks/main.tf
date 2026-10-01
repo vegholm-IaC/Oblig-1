@@ -11,13 +11,14 @@ module "network" {
 }
 
 module "compute" {
-  source      = "../modules/compute"
-  rsg_name    = var.rsg_name
-  base_name   = lower(var.base_name)
-  location    = var.location
-  vm_size     = lower(var.vm_size)
-  subnet_id   = module.network.subnet_ids["web"]
-  environment = var.environment
-  owner       = var.owner
-  managedby   = var.managedby
+  source         = "../modules/compute"
+  rsg_name       = var.rsg_name
+  base_name      = lower(var.base_name)
+  location       = var.location
+  vm_size        = lower(var.vm_size)
+  subnet_id      = module.network.subnet_ids["web"]
+  environment    = var.environment
+  owner          = var.owner
+  managedby      = var.managedby
+  admin_password = var.admin_password
 }

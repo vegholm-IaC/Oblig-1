@@ -45,3 +45,8 @@ variable "backend_storage_account_name" {
 variable "nettverk_state_key" {
   type = string
 }
+
+variable "admin_password" {
+  type      = string
+  sensitive = true
+}

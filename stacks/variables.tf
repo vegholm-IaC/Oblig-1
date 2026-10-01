@@ -32,3 +32,9 @@ variable "address_space" {
 variable "subnet_ids" {
   type = map(string)
 }
+
+variable "admin_password" {
+  type        = string
+  sensitive   = true
+  description = "Administratorpassordet som sendes videre til compute-modulen"
+}
