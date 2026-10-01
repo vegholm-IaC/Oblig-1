@@ -4,4 +4,5 @@ locals {
     owner       = var.owner
     managedby   = var.managedby
   }
+  subnet_id = data.terraform_remote_state.nettverk.outputs.subnet_ids[var.vm_subnet_key]
 }

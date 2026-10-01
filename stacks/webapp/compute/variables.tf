@@ -26,15 +26,22 @@ variable "address_space" {
   type = string
 }
 
-variable "subnets" {
-  type        = map(string)
-  description = "Subnett som skal opprettes: navn => adresseprefiks"
-}
-
-variable "vm_size" {
+variable "vm_subnet_key" {
   type = string
 }
 
-variable "subnet_ids" {
-  type = map(string)
+variable "backend_container_name" {
+  type = string
+}
+
+variable "backend_resource_group_name" {
+  type = string
+}
+
+variable "backend_storage_account_name" {
+  type = string
+}
+
+variable "nettverk_state_key" {
+  type = string
 }
